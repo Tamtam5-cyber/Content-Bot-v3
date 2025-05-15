@@ -23,12 +23,12 @@ BOT_TOKEN = os.getenv("BOT_TOKEN", "7587414782:AAFKrNmxNl6t4juM2R2zWAvxC8bbew_n-
 MONGO_DB = os.getenv("MONGO_DB", "mongodb+srv://nguyenkhactam5:<db_password>@kanereaction.zhqqd.mongodb.net/?retryWrites=true&w=majority&appName=kanereaction")
 OWNER_ID = list(map(int, os.getenv("OWNER_ID", "6705263463,6383614933").split(','))) # list seperated via space
 DB_NAME = os.getenv("DB_NAME", "download_content")
-STRING = os.getenv("STRING", None) # optional
+STRING = os.getenv("STRING", BQHGI2YAj7byklR-WUj9HIEI7wH-V1uwYQ32n1C_HNL5S1HF1sjRlBkreutmPiDdwjq3Khw1iz6L-LYF41G987dKBmnnjrLaLCLwP_Cv4oLvoAFTYzISpMtzDWwP2nagBFAz32DEUHGKFtbDIcCZDNr3XuDiq51GCyKlpEHGu_k-5pyzxRbkJwOH4nH8trw1usjGR4T9glc5t-KeDPhk9M364xg4F04a4k-v8IhEK2Y_6kpIfy_71-DngGTM1F_gfd3avVxfjHe-ooeyoB5H_W3lMdhv2FFKarIkl9eaTsRM1lMDWefXaJIEvfxQtCBqgV-vlGlwJPeYWEtjxhA49Hb6qiV-BgAAAAGNk7E3AA) # optional
 LOG_GROUP = int(os.getenv("LOG_GROUP", "-1002627666364")) # optional with -100
 FORCE_SUB = int(os.getenv("FORCE_SUB", "-1002472444792")) # optional with -100
 MASTER_KEY = os.getenv("MASTER_KEY", "gK8HzLfT9QpViJcYeB5wRa3DmN7P2xUq") # for session encryption
 IV_KEY = os.getenv("IV_KEY", "s7Yx5CpVmE3F") # for decryption
 YT_COOKIES = os.getenv("YT_COOKIES", YTUB_COOKIES)
 INSTA_COOKIES = os.getenv("INSTA_COOKIES", INST_COOKIES)
-FREEMIUM_LIMIT = int(os.getenv("FREEMIUM_LIMIT", "0"))
+FREEMIUM_LIMIT = int(os.getenv("FREEMIUM_LIMIT", "300"))
 PREMIUM_LIMIT = int(os.getenv("PREMIUM_LIMIT", "500"))
