@@ -23,7 +23,7 @@ BOT_TOKEN = os.getenv("BOT_TOKEN", "7876972067:AAFp1mrLDdAVjyBPKNb_9s98BibiRNOSO
 MONGO_DB = os.getenv("MONGO_DB", "mongodb+srv://nguyenkhactam5:<db_password>@kanereaction.zhqqd.mongodb.net/?retryWrites=true&w=majority&appName=kanereaction")
 OWNER_ID = list(map(int, os.getenv("OWNER_ID", "6383614933").split())) # list seperated via space
 DB_NAME = os.getenv("DB_NAME", "download_content")
-STRING = os.getenv("STRING", BQHGI2YAj7byklR-WUj9HIEI7wH-V1uwYQ32n1C_HNL5S1HF1sjRlBkreutmPiDdwjq3Khw1iz6L-LYF41G987dKBmnnjrLaLCLwP_Cv4oLvoAFTYzISpMtzDWwP2nagBFAz32DEUHGKFtbDIcCZDNr3XuDiq51GCyKlpEHGu_k-5pyzxRbkJwOH4nH8trw1usjGR4T9glc5t-KeDPhk9M364xg4F04a4k-v8IhEK2Y_6kpIfy_71-DngGTM1F_gfd3avVxfjHe-ooeyoB5H_W3lMdhv2FFKarIkl9eaTsRM1lMDWefXaJIEvfxQtCBqgV-vlGlwJPeYWEtjxhA49Hb6qiV-BgAAAAGNk7E3AA) # optional
+STRING = os.getenv("STRING", None) # optional
 LOG_GROUP = int(os.getenv("LOG_GROUP", "-1002627666364")) # optional with -100
 FORCE_SUB = int(os.getenv("FORCE_SUB", "-1002472444792")) # optional with -100
 MASTER_KEY = os.getenv("MASTER_KEY", "gK8HzLfT9QpViJcYeB5wRa3DmN7P2xUq") # for session encryption
