@@ -9,6 +9,6 @@ COPY requirements.txt .
 RUN pip3 install wheel
 RUN pip3 install --no-cache-dir -U -r requirements.txt
 COPY . .
-EXPOSE 80000
+EXPOSE 8080
 
 CMD docker run -d -p 8080:8080 --env-file .env --name bot-container save-restricted-bot
