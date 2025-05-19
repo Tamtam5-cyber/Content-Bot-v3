@@ -14,5 +14,5 @@ def welcome():
 
 if __name__ == "__main__":
     # Default to port 5000 if PORT is not set in the environment
-    port = int(os.environ.get("PORT", 8000))
+    port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
