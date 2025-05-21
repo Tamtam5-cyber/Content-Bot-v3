@@ -13,9 +13,10 @@ pymongo
 pytz
 Pillow
 tgcrypto
-flask
 werkzeug==2.2.2
 mutagen
 yt-dlp
 requests
 cryptography
+flask==2.0.1
+gunicorn==20.1.0
