@@ -18,7 +18,7 @@ mutagen
 yt-dlp
 requests
 cryptography
-flflask==2.0.1
+flask==2.0.1
 gunicorn==20.1.0
 Pyrogram==2.0.106
 TgCrypto==1.2.5  # Cần thiết cho Pyrogram
