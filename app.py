@@ -124,13 +124,11 @@ async def handle_update(data):
 
 @app.route("/webhook", methods=["POST"])
 def webhook():
-    # Nhận dữ liệu từ Telegram
     data = request.get_json(force=True)
     if not data:
         return "No data received", 400
 
     try:
-        # Tạo một coroutine để xử lý cập nhật
         loop = asyncio.get_event_loop()
         loop.create_task(handle_update(data))
         return "OK", 200
@@ -144,15 +142,22 @@ def welcome():
 
 # Khởi động bot khi ứng dụng chạy
 async def start_bot():
-    async with bot:
-        await bot.start()
-        logging.info("Bot started successfully")
-        await bot.set_webhook("https://content-bot-v3.onrender.com/webhook")
+    await bot.start()
+    logging.info("Bot started successfully")
+    await bot.set_webhook("https://content-bot-v3.onrender.com/webhook")
+
+# Hàm dừng bot khi ứng dụng tắt
+async def stop_bot():
+    await bot.stop()
+    logging.info("Bot stopped successfully")
 
 if __name__ == "__main__":
     # Khởi động bot trước khi chạy Flask
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(start_bot())
-    
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
+    try:
+        loop.run_until_complete(start_bot())
+        port = int(os.environ.get("PORT", 10000))
+        app.run(host="0.0.0.0", port=port)
+    finally:
+        loop.run_until_complete(stop_bot())
+        loop.close()
