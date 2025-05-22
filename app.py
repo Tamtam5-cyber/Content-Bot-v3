@@ -1,6 +1,6 @@
 import os
 import logging
-from flask import Flask, request
+from flask import Flask, request, render_template  # Thêm render_template vào import
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -90,7 +90,6 @@ def webhook():
         else:
             bot.send_message(chat_id=chat_id, text="Lệnh không được hỗ trợ. Gửi /help để xem danh sách lệnh.")
 
-    # Xử lý callback từ nút xác nhận
     if update.callback_query:
         query = update.callback_query
         chat_id = query.message.chat.id
