@@ -7,7 +7,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip3 install --upgrade pip
 RUN pip3 install wheel
-RUN pip3 install --no-cache-dir -U -r requirements.txt
-COPY . .
+RUN pip3 install --no-cache-dir -U -r requirements.txt --use-deprecated=legacy-resolverCOPY . .
 EXPOSE 5000
 CMD gunicorn app:app --bind 0.0.0.0:$PORT
