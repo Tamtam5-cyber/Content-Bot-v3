@@ -22,3 +22,4 @@ flask
 gunicorn
 Pyrogram
 TgCrypto
+gevent==23.9.1
